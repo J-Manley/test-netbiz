@@ -12,7 +12,7 @@ function toggleNav() {
   } else {
     nav.classList.add("show-nav");
     closeIcon.style.display = "block";
-    menuIcon.style.visibility = "hidden";
+    menuIcon.style.display = "none";
   }
 }
 
