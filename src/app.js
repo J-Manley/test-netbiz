@@ -12,6 +12,7 @@ function toggleNav() {
   } else {
     nav.classList.add("show-nav");
     closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
   }
 }
 
