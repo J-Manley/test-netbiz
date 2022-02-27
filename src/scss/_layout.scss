@@ -1,0 +1,126 @@
+@use "base.scss" as *;
+
+// Main Nav
+#main-nav {
+  display: flex;
+  padding: 0rem 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid #555;
+
+  .navbar {
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: $website-width;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem;
+
+      .mobile-toggle {
+        display: none;
+        z-index: 100;
+        padding: 0.5rem;
+        background-color: transparent;
+        color: $primary-text-color;
+        border: none;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: $bold;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  li {
+    padding: 0rem 1.5rem;
+  }
+  a {
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+// Header
+#header {
+  &-home {
+    background: $bg-image no-repeat center right / cover fixed;
+    min-height: 100vh;
+    position: relative;
+
+    .header-content {
+      padding-top: 20%;
+      margin-bottom: 10%;
+      animation-duration: 2000ms;
+      animation-name: fade-in;
+
+      &__text {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        max-width: 60%;
+        font-weight: $bold;
+        text-shadow: 0px 2px 2px #000;
+        line-height: 1;
+        transition: text-shadow 250ms;
+
+        &:hover {
+          text-shadow: 0px 5px 5px #000;
+        }
+      }
+    }
+    .mobile-nav {
+      display: none;
+      .close-icon {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// Booking
+#booking {
+  padding: 2rem 0rem;
+  color: $secondary-text-color;
+  background-color: $primary-color;
+
+  .booking-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      border-bottom: 1px solid $secondary-color;
+    }
+
+    &__input {
+      padding: 1em 9rem 0.5rem 1rem;
+      border: none;
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+// Variables
+$font-family: "Be Vietnam Pro", helvetica, sans-serif;
+$primary-color: #fff;
+$secondary-color: #000;
+$accent-color: #30d5c8;
+$overlay-color: rgba(48, 213, 200, 0.95);
+$primary-text-color: #fbfbf2;
+$secondary-text-color: #000;
+$normal: 400;
+$bold: 700;
+$bg-image: url("../img/background-image.jpg");
+$website-width: 1100px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family;
+  background: $primary-color;
+  color: $primary-text-color;
+}
+
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-text-color;
+  transition: color 250ms;
+}
+
+label {
+  color: $secondary-text-color;
+  text-align: left;
+}
+
+input {
+  font-size: 0.8rem;
+}
+
+input,
+button {
+  outline: none;
+}
+
+// Buttons
+%btn-shared {
+  padding: 1rem 1.5rem;
+  color: $primary-text-color;
+  background-color: $secondary-color;
+  border-radius: 30px;
+  transition: all 250ms;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  &-nav {
+    @extend %btn-shared;
+    padding: 0.5rem 1.5rem;
+  }
+
+  &-main {
+    @extend %btn-shared;
+    display: inline-block;
+
+    &:hover {
+      transform: translateY(-10%);
+    }
+  }
+
+  &-search {
+    @extend %btn-shared;
+    padding: 1rem 1rem;
+
+    &:hover {
+      background-color: $accent-color;
+    }
+  }
+}
+
+.fa-solid.fa-arrow-right {
+  margin-left: 0.75rem;
+}
